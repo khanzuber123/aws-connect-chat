@@ -3,104 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS Connect Chat</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABQG7JPMaX6U4j5lL3uC3bSH4aC1mVjdX9rZT9N0XVO7dh2TmsU7y5P" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AWS Connect Chat</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <title>Amazon Connect Chat Integration</title>
+  
+  <!-- Your other head content -->
 
-  <!-- Hero Section -->
-  <section class="jumbotron text-center bg-light py-5">
-    <div class="container">
-      <h1 class="display-4">Welcome to AWS Connect Chat</h1>
-      <p class="lead">Integrate live chat seamlessly with your customers using Amazon Connect</p>
-      <button id="start-chat" class="btn btn-primary">Start Chat</button>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="container py-5">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>About AWS Connect Chat</h2>
-        <p>AWS Connect is a cloud-based contact center solution that allows businesses to offer exceptional customer service through a scalable chat interface. Our chat widget integrates seamlessly with your website, providing an intuitive customer support experience.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="https://via.placeholder.com/500" alt="Chat Illustration" class="img-fluid">
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container py-5">
-    <h2 class="text-center">Contact Us</h2>
-    <form action="#" method="POST">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-4 bg-dark text-white">
-    <p>&copy; 2025 AWS Connect Chat. All Rights Reserved.</p>
-  </footer>
-
-  <!-- AWS Connect Chat Script -->
   <script type="text/javascript">
     (function(w, d, x, id){
-      s = d.createElement('script');
-      s.src = 'https://dtn7rvxwwlhud.cloudfront.net/amazon-connect-chat-interface-client.js';
-      s.async = 1;
-      s.id = id;
+      s=d.createElement('script');
+      s.src='https://dtn7rvxwwlhud.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async=1;
+      s.id=id;
       d.getElementsByTagName('head')[0].appendChild(s);
-      w[x] = w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
-    })(window, document, 'amazon_connect', '34285d05-91ed-422a-b45d-a7310dedf3f3');
-
-    amazon_connect('styles', {
-      iconType: 'CHAT_VOICE',
-      openChat: { color: '#ffffff', backgroundColor: '#123456' },
-      closeChat: { color: '#ffffff', backgroundColor: '#123456' }
-    });
-
-    amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdGNnZVQ0JwNmRhRHNFeW5oWFdNTng5QUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNUHkvSFBxMTlPUlZPb3BwMEFnRVFnQ3NTOUE2Q2NIeDNHR0FGZirtyWEM0UFY4cC9UckVOTnlRaTE5UjRLMC9PRnc1djdzV2pjZldDS1lJQjA6OnFOYXZQRkNyaWp2RTk5UnFrR2JxMS96RFg4M0dLeFFZYUNnZUgxaTFScW0rK0FwWnZ3bVJhdXZkVEVHQ25xYTZ5R05YaDN5aXhnZndOV2hzc1gyeFVlVENTcjVUQndqN3hMNVdZRkUxdFd3V3F3dkR0VEUycVNxQzhvbnB1SE0rZ05yVGFmSUJIa2l5aEo3aytIRlo0cU5ZNGdwZkNpTT0=');
-    amazon_connect('supportedMessagingContentTypes', [
-      'text/plain',
-      'text/markdown',
-      'application/vnd.amazonaws.connect.message.interactive',
-      'application/vnd.amazonaws.connect.message.interactive.response'
-    ]);
+      w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', '5b892fca-83be-4ef6-ac92-de9b166fcb34');
+    amazon_connect('styles', { iconType: 'CHAT_VOICE', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+    amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdGd3Y1UGdvY0NMaU8yYU9LanVkREZrQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNNkhwbkNrU2Q1QnpUNytZa0FnRVFnQ3UyaXQ1aXZqcDJjc3ZEdklONEtONDcwN3A1SnZvb3lwYUROMzVTRXRGVXo0T1hnTWpHZmxOY1d1SXk6OjQxczBHVUE5bHk4T1U5bXNGemZNTk9SdWlHQ0VmZ2huMzhaOW41UkY3dmYyeHhCYit1YjlqaEM4S3h5QW0vR1NDOXFicGFxM0pVZlczQTlHNHVTaTJLYzZpTHdkKzZ0QVpUR0NKTGFTZGFaS1BNMFRDaUdqN0xtYzNFRVJPc29KT1kyNEtQbFZaUDlkN2hsZ1JFSkpuQU52Z2lkcVRMZz0=');
+    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Your body content -->
 </body>
 </html>
