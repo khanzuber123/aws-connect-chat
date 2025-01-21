@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Connect Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to AWS Connect Chat Test</h1>
+    <div id="chat-container">
+      <!-- AWS Connect chat widget will appear here -->
+    </div>
+    <button id="start-chat">Start Chat</button>
+  </div>
+  
+  <!-- Include additional JavaScript file if needed -->
+  <script src="chat-widget.js"></script>
+
+  <!-- AWS Connect Chat Script -->
+  <script type="text/javascript">
+    (function(w, d, x, id){
+      s = d.createElement('script');
+      s.src = 'https://dtn7rvxwwlhud.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async = 1;
+      s.id = id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] = w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', '42dc431f-d041-4032-b114-3ec0ececa722');
+    
+    amazon_connect('styles', { 
+      iconType: 'CHAT', 
+      openChat: { color: '#ffffff', backgroundColor: '#123456' }, 
+      closeChat: { color: '#ffffff', backgroundColor: '#123456'}
+    });
+    
+    amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdIWmxjT3JHMnYrTFdmK1dGdlI3c1BOQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNT3FtK09ORkRseEVlSW4rVEFnRVFnQ3RBTGJaUHNhSExMRnplNW5leUdXSzhJNENoNE5sQW93Y1c3MVpiWkRZd09PbzVtZk1mWTkzNGZJblE6OjA0aEZPYnA3RDkxTVdNVnRTdjRCQlRzdko2Yit5RWpUck4zSmgrSU12ZTdXUjZLNHhGT1hnRWxJZVRTTkpjM1FGNVl4dTZ0NzBUUzFQOHJ6Rm1QL3U0dXJScGVNSlo2TnF6WnJ0Y2pacmFjbkJRMUZ0eE5HV1VWbWlGcFZJUFVSaHZWRFlaN1lFR1p5anI3V3k4ZjAvM3lTVnRvcnpjUT0=');
+    amazon_connect('supportedMessagingContentTypes', [ 
+      'text/plain', 
+      'text/markdown', 
+      'application/vnd.amazonaws.connect.message.interactive', 
+      'application/vnd.amazonaws.connect.message.interactive.response' 
+    ]);
+  </script>
+</body>
+</html>
